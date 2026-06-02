@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Interview Agent</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="loginPage" class="page active">
+        <div class="container">
+            <div class="login-card">
+                <h1>🤖 AI Interview Agent</h1>
+                <p class="subtitle">Your intelligent interview companion</p>
+                
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    
+                    <button type="submit" class="btn primary">Login</button>
+                </form>
+                
+                <div class="demo-credentials">
+                    <small>Demo: username: demo, password: 1234</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div id="dashboardPage" class="page">
+        <div class="container">
+            <header class="dashboard-header">
+                <h1>Welcome to Your Interview Process</h1>
+                <button id="logoutBtn" class="btn secondary">Logout</button>
+            </header>
+            
+            <div class="job-description">
+                <h2>📋 Job Description</h2>
+                <div class="job-card">
+                    <h3>Software Engineer - AI/ML</h3>
+                    <p>We are looking for a talented Software Engineer with expertise in Python, AI/ML, and strong problem-solving skills. The role involves developing intelligent systems and working on cutting-edge AI projects.</p>
+                    
+                    <div class="requirements">
+                        <h4>Key Requirements:</h4>
+                        <ul>
+                            <li>Strong aptitude and reasoning skills</li>
+                            <li>Proficiency in Python programming</li>
+                            <li>Understanding of AI/ML concepts</li>
+                            <li>Problem-solving abilities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="interview-rounds">
+                <h2>🎯 Interview Process</h2>
+                <div class="rounds-grid">
+                    <div class="round-card" id="round1Card">
+                        <div class="round-number">1</div>
+                        <h3>Screening Round</h3>
+                        <p>Aptitude & Reasoning (10 MCQs)</p>
+                        <div class="round-status" id="round1Status">Ready to start</div>
+                        <button class="btn primary" id="startRound1">Start Round 1</button>
+                    </div>
+                    
+                    <div class="round-card locked" id="round2Card">
+                        <div class="round-number">2</div>
+                        <h3>Technical Round</h3>
+                        <p>Python & AI/ML (10 MCQs)</p>
+                        <div class="round-status" id="round2Status">🔒 Complete Round 1 first</div>
+                        <button class="btn primary disabled" id="startRound2" disabled>Start Round 2</button>
+                    </div>
+                    
+                    <div class="round-card locked" id="round3Card">
+                        <div class="round-number">3</div>
+                        <h3>Coding Round</h3>
+                        <p>Programming Problems (2 Questions)</p>
+                        <div class="round-status" id="round3Status">🔒 Complete Round 2 first</div>
+                        <button class="btn primary disabled" id="startRound3" disabled>Start Round 3</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Interface Page -->
+    <div id="chatPage" class="page">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2 id="chatTitle">AI Interview Assistant</h2>
+                <div class="chat-info">
+                    <span id="roundInfo"></span>
+                    <span id="questionCounter"></span>
+                </div>
+            </div>
+            
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will be dynamically added here -->
+            </div>
+            
+            <div class="chat-input-area" id="chatInputArea">
+                <div class="input-group">
+                    <input type="text" id="chatInput" placeholder="Type your answer here..." disabled>
+                    <button id="sendBtn" class="btn primary" disabled>Send</button>
+                </div>
+            </div>
+            
+            <div class="mcq-options" id="mcqOptions" style="display: none;">
+                <!-- MCQ options will be dynamically added here -->
+            </div>
+            
+            <div class="coding-area" id="codingArea" style="display: none;">
+                <div class="code-editor">
+                    <textarea id="codeEditor" placeholder="Write your Python code here..."></textarea>
+                    <button id="submitCode" class="btn primary">Submit Solution</button>
+                </div>
+            </div>
+            
+            <div class="chat-actions">
+                <button id="backToDashboard" class="btn secondary">Back to Dashboard</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

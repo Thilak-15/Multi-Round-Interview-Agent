@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Invitation - TechCorp</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='landing.css') }}">
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <div class="company-logo">
+                <div class="logo-circle">
+                    <span class="logo-text">TC</span>
+                </div>
+                <div class="company-info">
+                    <h1>TechCorp Inc.</h1>
+                    <p>hr@techcorp.com</p>
+                </div>
+            </div>
+            <div class="email-date">
+                <p>Today, {{ current_date }}</p>
+            </div>
+        </div>
+
+        <div class="email-body">
+            <div class="congratulations-banner">
+                <h2>🎉 CONGRATULATIONS ON SECURING AN INTERVIEW</h2>
+            </div>
+
+            <div class="email-content">
+                <p>Dear Candidate,</p>
+                
+                <p>To help prepare for your <strong>interview</strong>, please visit our <a href="#" class="highlight-link">join us</a> page. This will give you insights on our company, career opportunities, and a chance to read the <a href="#" class="highlight-link">diversity</a> of our global team. Our <strong>interviews</strong> consist of behavioral based questions in line with our <span class="highlight-text">Key Knowledge areas</span>, and we also recommend using <span class="highlight-text">the STAR method</span> to help structure your answers. By being able to successfully articulate what it's like to <span class="highlight-text">work with us</span>, we are better positioned to encourage people to build their careers with us- watch our Employer Brand Video <a href="#" class="highlight-link">here</a>.</p>
+
+                <p>Please find the details for your interview regarding the position of <strong>Software Engineer - AI/ML Content Writer</strong> below:</p>
+
+                <div class="interview-details">
+                    <ul>
+                        <li>
+                            <strong>Interviewers:</strong><br>
+                            <span class="interviewer-name">Sarah Johnson</span><br>
+                            <span class="interviewer-title">Senior AI/ML Engineering Manager</span>
+                        </li>
+                        <li>
+                            <strong>Date:</strong> <span class="date-highlight">Available 24/7</span>
+                        </li>
+                        <li>
+                            <strong>Time:</strong> <span class="time-highlight">Flexible (AI-powered interview)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="important-notice">
+                    <h3>IMPORTANT:</h3>
+                    <p>Please also complete the <strong>AI-Powered Technical Assessment</strong> linked <a href="#" class="important-link">here</a>.</p>
+                    <p>This assessment helps us understand a person's technical skills, problem-solving abilities, and coding patterns.</p>
+                    <p>If you want to see the results after completing the assessment, please contact us directly.</p>
+                    <p><strong>Please be advised this assessment will not have an impact on manager's decision.</strong></p>
+                </div>
+
+                <p>You will be able to connect via <span class="platform-link">the link below</span>. It is Mobile and Computer friendly, but we always advise to have the <strong>interview</strong> on a computer in a quiet and well-lit room.</p>
+
+                <hr class="divider">
+
+                <div class="platform-section">
+                    <div class="platform-header">
+                        <div class="platform-logo">
+                            <div class="ai-logo">🤖</div>
+                        </div>
+                        <div class="platform-info">
+                            <h3>AI Interview Assistant</h3>
+                            <p class="need-help">Need help?</p>
+                        </div>
+                    </div>
+
+                    <div class="join-section">
+                        <button id="joinInterviewBtn" class="join-button">
+                            🚀 Start Your Interview Now
+                        </button>
+                        
+                        <div class="access-details">
+                            <p><strong>Interview ID:</strong> <span class="code">AI-TECH-2026</span></p>
+                            <p><strong>Access Code:</strong> <span class="code">DEMO1234</span></p>
+                        </div>
+                    </div>
+
+                    <div class="test-info">
+                        <div class="test-rounds">
+                            <h4>📋 Interview Structure:</h4>
+                            <div class="rounds-grid">
+                                <div class="round-item">
+                                    <div class="round-number">1</div>
+                                    <div class="round-info">
+                                        <h5>Screening Round</h5>
+                                        <p>Aptitude & Reasoning (10 MCQs)</p>
+                                        <span class="duration">30 minutes</span>
+                                    </div>
+                                </div>
+                                <div class="round-item">
+                                    <div class="round-number">2</div>
+                                    <div class="round-info">
+                                        <h5>Technical Round</h5>
+                                        <p>Python & AI/ML (10 MCQs)</p>
+                                        <span class="duration">30 minutes</span>
+                                    </div>
+                                </div>
+                                <div class="round-item">
+                                    <div class="round-number">3</div>
+                                    <div class="round-info">
+                                        <h5>Coding Challenge</h5>
+                                        <p>Programming Problems (2 Questions)</p>
+                                        <span class="duration">No time limit</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-message">
+                    <p><strong>💡 Pro Tips:</strong></p>
+                    <ul class="tips-list">
+                        <li>✅ Test your internet connection beforehand</li>
+                        <li>✅ Prepare your workspace with good lighting</li>
+                        <li>✅ Have a pen and paper ready for notes</li>
+                        <li>✅ Review the job description and your resume</li>
+                        <li>✅ Be ready to showcase your problem-solving skills</li>
+                    </ul>
+                    
+                    <p class="good-luck">We're excited to meet you and learn more about your experience! 🌟</p>
+                    
+                    <div class="signature">
+                        <p><strong>Best regards,</strong><br>
+                        The TechCorp Recruitment Team<br>
+                        <span class="company-tagline">"Innovation through Intelligence"</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('joinInterviewBtn').addEventListener('click', function() {
+    window.open('/interview', '_blank');
+});
+
+        // Add some interactive effects
+        document.querySelectorAll('.highlight-link').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = '#e3f2fd';
+            });
+            link.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = 'transparent';
+            });
+        });
+    </script>
+</body>
+</html>

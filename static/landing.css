@@ -1,0 +1,499 @@
+/* Landing Page Email Template Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.email-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    animation: slideInUp 0.8s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Email Header */
+.email-header {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: white;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.company-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-circle {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.company-info h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.company-info p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.email-date {
+    text-align: right;
+    opacity: 0.9;
+}
+
+/* Email Body */
+.email-body {
+    padding: 0;
+}
+
+.congratulations-banner {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.congratulations-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { transform: translateX(-100%) translateY(-100%) rotate(30deg); }
+    50% { transform: translateX(100%) translateY(100%) rotate(30deg); }
+}
+
+.congratulations-banner h2 {
+    font-size: 24px;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+.email-content {
+    padding: 30px;
+    color: #334155;
+    font-size: 16px;
+}
+
+.email-content p {
+    margin-bottom: 16px;
+}
+
+/* Highlight Styles */
+.highlight-link {
+    color: #3b82f6;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.highlight-link:hover {
+    color: #1d4ed8;
+    background-color: #e0f2fe;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.highlight-text {
+    background: linear-gradient(120deg, #a855f7 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+/* Interview Details */
+.interview-details {
+    background: #f8fafc;
+    border-left: 4px solid #3b82f6;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.interview-details ul {
+    list-style: none;
+}
+
+.interview-details li {
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+.interviewer-name {
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.interviewer-title {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.date-highlight, .time-highlight {
+    background: linear-gradient(120deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Important Notice */
+.important-notice {
+    background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+    border: 1px solid #f87171;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 25px 0;
+}
+
+.important-notice h3 {
+    color: #dc2626;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.important-notice p {
+    color: #7f1d1d;
+    margin-bottom: 8px;
+}
+
+.important-link {
+    color: #dc2626;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* Divider */
+.divider {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, #e5e7eb 0%, #9ca3af 50%, #e5e7eb 100%);
+    margin: 30px 0;
+}
+
+/* Platform Section */
+.platform-section {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px 0;
+    border: 1px solid #e5e7eb;
+}
+
+.platform-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.ai-logo {
+    font-size: 32px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.platform-info h3 {
+    color: #1e293b;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.need-help {
+    color: #3b82f6;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Join Button */
+.join-section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.join-button {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3); }
+    to { box-shadow: 0 8px 35px rgba(16, 185, 129, 0.5); }
+}
+
+.join-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(16, 185, 129, 0.4);
+}
+
+.join-button:active {
+    transform: translateY(-1px);
+}
+
+/* Access Details */
+.access-details {
+    margin-top: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.access-details p {
+    margin-bottom: 8px;
+    color: #4b5563;
+}
+
+.code {
+    background: #374151;
+    color: #f3f4f6;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+}
+
+/* Test Info */
+.test-info {
+    margin-top: 25px;
+}
+
+.test-rounds h4 {
+    color: #1e293b;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.rounds-grid {
+    display: grid;
+    gap: 15px;
+}
+
+.round-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease;
+}
+
+.round-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.round-number {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.round-info h5 {
+    color: #1e293b;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.round-info p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.duration {
+    background: #fef3c7;
+    color: #92400e;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Footer */
+.footer-message {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 2px solid #f1f5f9;
+}
+
+.tips-list {
+    list-style: none;
+    margin: 15px 0;
+}
+
+.tips-list li {
+    padding: 8px 0;
+    color: #374151;
+}
+
+.good-luck {
+    background: linear-gradient(135deg, #ddd6fe 0%, #c7d2fe 100%);
+    color: #5b21b6;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.signature {
+    text-align: center;
+    margin-top: 25px;
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+
+.company-tagline {
+    font-style: italic;
+    color: #6366f1;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .email-container {
+        margin: 10px;
+        border-radius: 8px;
+    }
+    
+    .email-header {
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .email-content {
+        padding: 20px;
+    }
+    
+    .congratulations-banner h2 {
+        font-size: 20px;
+    }
+    
+    .join-button {
+        padding: 15px 30px;
+        font-size: 18px;
+    }
+    
+    .company-info h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .email-content {
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+    .join-button {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+}
+
+/* Loading Animation */
+.email-container {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
