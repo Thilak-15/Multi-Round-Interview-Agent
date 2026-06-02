@@ -101,7 +101,6 @@ def call_openai(prompt):
 
 ### **1. Install Dependencies**
 ```bash
-cd /Users/sanjaymunukoti/Desktop/agenttt
 pip install -r requirements.txt
 ```
 
